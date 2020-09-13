@@ -16,11 +16,19 @@
     </header>
 
     <div class="container" > <!--begin main wrapper-->
+        <div class="row">
         <h2 class="indigo-text text-darken-4">Learn More</h2>
-        <p>Check out these videos to hone your skills.</p>
-        
-        <div class="collection">
-            <a href="#!" class="collection-item indigo-text text-darken-4">Video 1</a>
+        <p>Enter a subject then check out the videos below to hone your skills. </p>
+            <div id="search-subject-container"class="input-field col s6">
+                <input placeholder="Search" id="subject" type="text" class="validate">
+                <label for="subject">Enter Subject</label>
+                <button class="btn btn-submit">Search</button>
+            </div>
+               
+        </div>
+
+        <div id="video-container" class="collection">
+            <a href="#!" class="collection-item indigo-text text-darken-4">Title</a>
             <a href="#!" class="collection-item indigo-text text-darken-4">Video 2</a>
         </div>
 
