@@ -7,10 +7,22 @@ var vidId = "X4XKZ8irrYQ";
 var youTubeUrl = "https://www.youtube.com/watch?v=" + vidId;
 
 
-fetch(apiUrl).then(function(response){
-    return response.json();
-})
-.then(function(data){
-    console.log(data);
-})
+var getVideo = function(){
+    fetch(apiUrl).then(function(response){
+        return response.json();
+        
+    })
+    .then(function(data){
+        console.log(data);
+        //once displayVideo is finished, we will call that here
+    })
+}
+
+//displayVideo function
+
+
+//if time we can have a watched video section???
+
+
+getVideo();
 

@@ -1,3 +1,8 @@
+.root{
+    --primary:#2e3374;
+    --accent: #ec7705; 
+}
+
 header img {
     width: 400px;
     height: 200px;
@@ -7,4 +12,14 @@ header img {
     height: 300px;
     width: 400px;
     opacity: 75%;
+}
+
+.btn-navigate {
+    background-color:#ec7705;
+    color: #2e3374;
+}
+
+.btn-navigate:hover {
+    background-color:#2e3374;
+    color: #ec7705;
 }
