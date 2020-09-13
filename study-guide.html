@@ -17,30 +17,27 @@
 
     <div class="container" > <!--begin main wrapper-->
         <div class="row">
-        <h2 class="indigo-text text-darken-4">Learn More</h2>
-        <p>Enter a subject then check out the videos below to hone your skills. </p>
-            <div id="search-subject-container"class="input-field col s6">
-                <input placeholder="Search" id="subject" type="text" class="validate">
-                <label for="subject">Enter Subject</label>
-                <button class="btn btn-submit">Search</button>
+            <h2 class="indigo-text text-darken-4">Learn More</h2>
+                <p>Click a button to choose a subject then check out the videos below to hone your skills. </p>
+            <div id="subject-buttons" class="card-body">
+                <button data-subject="math" type="button" class="btn btn-submit">Math</button>
+                <button data-subject="english+grammer" type="button" class="btn btn-submit">English</button>
+                <button data-subject="science" type="button" class="btn btn-submit">Science</button>
+                <button data-subject="history" type="button" class="btn btn-submit">History</button>
+                <button data-subject="geography" type="button" class="btn btn-submit">Geography</button>
             </div>
-               
+        </div> 
+        
+        <div id="video-container" class="collection">   
+                   <!-- videoDisplay function data -->
         </div>
 
-        <div id="video-container" class="collection">
-            <a href="#!" class="collection-item indigo-text text-darken-4">Title</a>
-            <a href="#!" class="collection-item indigo-text text-darken-4">Video 2</a>
-        </div>
-
-   
 <!-- these buttons will link to homepage and to replay the game -->
-    <a href="./game.html" class="btn btn-navigate">Play Again</a>
-    <a href="./index.html" class="btn btn-navigate"> Go to HomeScreen</a>
+        <a href="./game.html" class="btn btn-navigate">Play Again</a>
+        <a href="./index.html" class="btn btn-navigate"> Go to HomeScreen</a>
+        <a href="https://www.youtube.com/" class="btn btn-navigate">Find More Videos</a>
 
-</div> <!--end main wrapper-->
-
-
-
+    </div> <!--end main container-->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" 
@@ -48,7 +45,6 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
     <script src="https://apis.google.com/js/api.js"></script>
-
     <script src="./assets/js/script-study.js"></script>
     
 </body>

@@ -2,13 +2,12 @@
 var videoContainerEl = document.querySelector("#video-container");
 var searchFormEl = document.querySelector("#search-subject-container");
 var searchSubjectEl = document.querySelector("#subject");
-
+var subjectButtonsEl = document.querySelector("#subject-buttons");
 
 var getVideo = function(searchSubject){
 var apiKey = "AIzaSyC_ulDAOCSFzMHJohdo0uLmgt94TwOefOk";
-var apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=date&q=" + searchSubject + "&key=" + apiKey;
-   
-    
+var apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=date&q=" + searchSubject + "&regionCode=US&relevanceLanguage=en&safeSearch=strict&key=" + apiKey;
+
     fetch(apiUrl).then(function(response){
         if(response.ok){
             response.json().then(function(data){
@@ -25,14 +24,12 @@ var apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=da
         
 } // end getVideo function
 
-// subject Submit handler
-var subjectSubmitHandler = function(event) {
-   event.preventDefault();
-   searchSubjectEl.textContent="";
-   var searchSubject = searchSubjectEl.value.trim();
-   if (searchSubject) {
-       getVideo(searchSubject);
-   } 
+// subject button handler
+var subjectButtonHandler = function(event) {
+
+    var searchSubject = event.target.getAttribute("data-subject");
+    getVideo(searchSubject);
+    videoContainerEl.textContent = "";
   
 }
 
@@ -44,7 +41,7 @@ var displayVideo = function(data) {
     }
     //clear old content
     videoContainerEl.textContent = "";
-    searchSubjectEl.textContent= subject;
+    // searchSubjectEl.textContent= searchSubject;
 
     //video array
     var videos = data.items
@@ -52,20 +49,21 @@ var displayVideo = function(data) {
     for (var i=0; i < videos.length; i++) {
         let vidId = videos[i].id.videoId;
         let vidTitle = videos[i].snippet.title;
-        var youTubeUrl = "https://www.youtube.com/watch?v=" + vidId;
-        console.log(vidId);
-        console.log(vidTitle);
-        console.log(youTubeUrl);
+        var videoUrl = "https://www.youtube.com/watch?v=" + vidId;
+        
+        var videoEl = document.createElement("a");
+        videoEl.classList = "collection-item indigo-text text-darken-4";
+        videoEl.setAttribute("href", videoUrl);
+        videoEl.setAttribute("target", "_blank");
+        var vidTitleEl = document.createElement("span");
+        vidTitleEl.textContent = vidTitle;
 
-        // var videoTitleEl
+        videoEl.appendChild(vidTitleEl);
+
+        videoContainerEl.appendChild(videoEl);
 
     }
-
-
 }
 
-//if time we can have a watched video section???
-searchFormEl.addEventListener("click", subjectSubmitHandler);
-
-
+subjectButtonsEl.addEventListener("click", subjectButtonHandler);
 
