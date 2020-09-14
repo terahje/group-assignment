@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Get Wizier</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/game.css" />
+</head>
+<body>
+
+    <main>
+
+        <header>
+            <div class="row main-title"><h1>Get Wizier</h1></div>
+            <nav>
+                <div class="nav-wrapper">
+                    <ul class="right hide-on-med-and-down">
+                        <li id="math">Math</li>
+                        <li id="science">Science</li>
+                        <li id="geography">Geography</li>
+                        <li id="random">Random Topics</li>
+
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="row">
+                <div class="col s6 question-count">
+                    <h1 class="main-text" id="question-counter">count<span class="countX">x</span> of <span class="countY">y</span></h1>
+                </div>
+                <div class="col s6 question-count">
+                    <h1 id="score" class="main-text">0</h1>
+                </div>
+            </div>
+
+
+        </header>
+
+
+
+        <div class="container">
+
+            <div id="game" class="row">
+
+                <div class="col s2">
+
+
+
+
+                </div>
+                <div id="question-card" class="col s8">
+                    <div class="card large">
+                        <div class="card-content">
+                            <span id="question" class="card-title">Select the correct answer</span>
+                            <ul id="choice-container" class="collection">
+                                <li class="collection-item choice-text" data-number="1">Choice 1</li>
+                                <li class="collection-item choice-text" data-number="2">Choice 2</li>
+                                <li class="collection-item choice-text" data-number="3">Choice 3</li>
+                                <li class="collection-item choice-text" data-number="4">Choice 4</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2"></div>
+            </div>
+        </div>
+
+
+        <aside class="feedbackContainer container">
+            <div class="row">
+                <div id="correctAnswer" class="correct"></div>
+                <div id="incorrectAnswer" class="incorrect"></div>
+            </div>
+        </aside>
+    </main>
+    <script src="./assets/js/game2.js"></script>
+</body>
+</html>
