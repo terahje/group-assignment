@@ -3,6 +3,7 @@ var videoContainerEl = document.querySelector("#video-container");
 var searchFormEl = document.querySelector("#search-subject-container");
 var searchSubjectEl = document.querySelector("#subject");
 var subjectButtonsEl = document.querySelector("#subject-buttons");
+var modalContainerEl = document.querySelector("#modal-container");
 
 var getVideo = function(searchSubject){
 var apiKey = "AIzaSyC_ulDAOCSFzMHJohdo0uLmgt94TwOefOk";
@@ -14,12 +15,21 @@ var apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=da
                 displayVideo(data);
             });
         } else {
-            alert("please choose a subject");
+            Swal.fire({
+                title: "Please choose a subject.",
+                confirmButtonText: "Return to Choices",
+                confirmButtonColor: "#2e3374"
+            })
         }
         
     })
         .catch(function(error){
-            alert("unable to connect to You Tube");
+            Swal.fire({
+                title: "Oh No! We could not connect to the website.",
+                confirmButtonText: "Close Window",
+                confirmButtonColor: "#ec7705"
+            })
+            
         })
         
 } // end getVideo function
@@ -37,6 +47,7 @@ var subjectButtonHandler = function(event) {
 var displayVideo = function(data) {
     if(data.items.length === 0 ) {
         videoContainerEl.textContent = "No videos matched your search.";
+        swal("We could not find any videos that matched your search");
         return;
     }
     //clear old content

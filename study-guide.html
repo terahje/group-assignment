@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -22,9 +23,9 @@
             <div id="subject-buttons" class="card-body">
                 <button data-subject="math" type="button" class="btn btn-submit">Math</button>
                 <button data-subject="english+grammer" type="button" class="btn btn-submit">English</button>
-                <button data-subject="science" type="button" class="btn btn-submit">Science</button>
-                <button data-subject="history" type="button" class="btn btn-submit">History</button>
-                <button data-subject="geography" type="button" class="btn btn-submit">Geography</button>
+                <button data-subject="science+for+kids" type="button" class="btn btn-submit">Science</button>
+                <button data-subject="us+history" type="button" class="btn btn-submit">History</button>
+                <button data-subject="world+geography+for+kids" type="button" class="btn btn-submit">Geography</button>
             </div>
         </div> 
         
@@ -32,6 +33,10 @@
                    <!-- videoDisplay function data -->
         </div>
 
+        <!-- Modal HTML -->
+        <div id="modal-container">
+
+        </div>
 <!-- these buttons will link to homepage and to replay the game -->
         <a href="./game.html" class="btn btn-navigate">Play Again</a>
         <a href="./index.html" class="btn btn-navigate"> Go to HomeScreen</a>
@@ -39,6 +44,9 @@
 
     </div> <!--end main container-->
 
+
+<!-- script tags -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" 
     integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" 
@@ -46,6 +54,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="./assets/js/script-study.js"></script>
+    
     
 </body>
 </html>
