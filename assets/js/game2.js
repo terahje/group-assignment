@@ -21,12 +21,12 @@ let questions = [];//returned array from the API.
 let max_questions = 10; //total number of questions given via the API
 let correct_bonus = 10;
 let penalty = -1;
-var math = document.addEventListener('#math');
 
 
 
 
-var getMathQuestions = function(event) {
+
+function getMathQuestions() {
 
     fetch('https://opentdb.com/api.php?amount=10&category=19&type=multiple')
 
@@ -168,9 +168,6 @@ getRandomQuestions();
 
 
 function startGame() {
-    if (
-        
-    )
     questionCount = 0;
     score = 0;
     activeQuestion = [...questions];
