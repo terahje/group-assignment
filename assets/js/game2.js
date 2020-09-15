@@ -26,7 +26,7 @@ let penalty = -1;
 
 
 
-function getMathQuestions() {
+var getMathQuestions = function() {
 
     fetch('https://opentdb.com/api.php?amount=10&category=19&type=multiple')
 
@@ -68,7 +68,7 @@ function getMathQuestions() {
         });
 
 }
-function getScienceQuestions() {
+var getScienceQuestions = function() {
     fetch('https://opentdb.com/api.php?amount=10&category=17&type=multiple')
         .then(function (response) {
             return response.json();
@@ -96,7 +96,7 @@ function getScienceQuestions() {
             console.error(err);
         });
 }
-function getGeographyQuestions() {
+var getGeographyQuestions = function() {
     fetch('https://opentdb.com/api.php?amount=10&category=22&type=multiple')
         .then(function (response) {
             return response.json();
@@ -124,7 +124,7 @@ function getGeographyQuestions() {
             console.error(err);
         });
 }
-function getRandomQuestions() {
+var getRandomQuestions = function() {
     fetch('https://opentdb.com/api.php?amount=10&type=multiple')
         .then(function (response) {
             return response.json();
@@ -168,6 +168,7 @@ getRandomQuestions();
 
 
 function startGame() {
+    if()
     questionCount = 0;
     score = 0;
     activeQuestion = [...questions];
