@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizier -Study Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header id="header" class="indigo darken-4 center-align">
+        <!-- Logo goes here -->
+        <img src="./assets/images/wizier-logo.png">
+    </header>
+
+    <div class="container" > <!--begin main wrapper-->
+        <div class="row">
+            <h3 class="indigo-text text-darken-4">Learn More</h3>
+                <p>Click a button to choose a subject then check out the videos below to hone your skills. </p>
+            <div id="subject-buttons" class="card-body">
+                <button data-subject="math" type="button" class="btn btn-submit">Math</button>
+                <button data-subject="science+for+kids" type="button" class="btn btn-submit">Science</button>
+                <button data-subject="us+history" type="button" class="btn btn-submit">History</button>
+                <button data-subject="world+geography+for+kids" type="button" class="btn btn-submit">Geography</button>
+            </div>
+        </div> 
+        
+        <div id="video-container" class="collection">   
+                   <!-- videoDisplay function data -->
+        </div>
+
+        <!-- Modal HTML -->
+        <div id="modal-container">
+
+        </div>
+<!-- these buttons will link to homepage and to replay the game -->
+        <a href="./game.html" class="btn btn-navigate">Play Again</a>
+        <a href="./index.html" class="btn btn-navigate"> Go to HomeScreen</a>
+        <a href="https://www.youtube.com/" class="btn btn-navigate">Find More Videos</a>
+
+    </div> <!--end main container-->
+
+
+<!-- script tags -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" 
+    integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="./assets/js/study.js"></script>
+    
+    
+</body>
+</html>

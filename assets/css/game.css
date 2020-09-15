@@ -1,0 +1,53 @@
+﻿
+.collection-item {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid var(--borderShadow);
+    background-color: var(--antiqueWhite);
+    padding:1.5rem;
+}
+
+    .collection-item:hover {
+        cursor: pointer;
+        box-shadow: 0 0.4rem 1.4rem 0 var(--shadowBox);
+        transform: translateY(-.1rem);
+        transition: transform 150ms;
+    }
+
+    .choice-prefix{
+        padding: .75rem 2.5rem;
+        background-color: var(--darkLavender);
+        color: var(--antiqueWhite);
+    }
+
+
+
+
+
+    .feedbackContainer{
+        display: flex;
+        justify-content: center;
+        background-color: var(--lightLavender);
+        width: 100%;
+        padding: 5rem;
+    }
+
+    .correct{
+
+        color: #28a745;
+        font-weight: bold;
+        font-size: 4rem;
+        text-align: center;
+        background-color: var(--antiqueWhite);
+    }
+
+    .incorrect{
+
+        color: #dc3545;
+        font-weight: bold;
+        font-size: 4rem;
+        text-align: center;
+        background-color: var(--antiqueWhite);
+    }
