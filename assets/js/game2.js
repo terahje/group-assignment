@@ -21,12 +21,12 @@ let questions = [];//returned array from the API.
 let max_questions = 10; //total number of questions given via the API
 let correct_bonus = 10;
 let penalty = -1;
+var math = document.addEventListener('#math');
 
 
 
 
-
-var getMathQuestions = function() {
+var getMathQuestions = function(event) {
 
     fetch('https://opentdb.com/api.php?amount=10&category=19&type=multiple')
 
@@ -68,7 +68,7 @@ var getMathQuestions = function() {
         });
 
 }
-var getScienceQuestions = function() {
+function getScienceQuestions() {
     fetch('https://opentdb.com/api.php?amount=10&category=17&type=multiple')
         .then(function (response) {
             return response.json();
@@ -96,7 +96,7 @@ var getScienceQuestions = function() {
             console.error(err);
         });
 }
-var getGeographyQuestions = function() {
+function getGeographyQuestions() {
     fetch('https://opentdb.com/api.php?amount=10&category=22&type=multiple')
         .then(function (response) {
             return response.json();
@@ -124,7 +124,7 @@ var getGeographyQuestions = function() {
             console.error(err);
         });
 }
-var getRandomQuestions = function() {
+function getRandomQuestions() {
     fetch('https://opentdb.com/api.php?amount=10&type=multiple')
         .then(function (response) {
             return response.json();
@@ -168,7 +168,9 @@ getRandomQuestions();
 
 
 function startGame() {
-    if()
+    if (
+        
+    )
     questionCount = 0;
     score = 0;
     activeQuestion = [...questions];
@@ -254,7 +256,3 @@ function incrementScore(num) {
     score += num;
     scoreText.innerText = score;
 }
-
-
-
-

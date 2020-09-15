@@ -3,15 +3,29 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Congratulations!!</title>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Get Wizier</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/styles.css" /> -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/game.css" />
 </head>
 <body>
+
+    <main>
+
+        <header class="indigo darken-4 center-align">
+            <img src="./assets/images/wizier-logo.png">
+            <!-- <div class="row main-title"><h1>Get Wizier</h1></div> -->
+        </header>
+        <div class="container" > <!--begin main wrapper-->
+            <div class="row">
+            <!-- <nav> -->
+                <!-- <div class="nav-wrapper"> -->
+                    <h3 class="indigo-text text-darken-4">Leader Board:</h3>
+                <div id="subject-buttons" class="card-body">
     <div class="container">
         <div id="end" class="flex-center flex-column">
-            <h1 id="finalScore"></h1>
+            <h1 id="finalScore">Final Score: </h1>
             <form>
                 <input type="text" name="username" id="username" placeholder="username" />
                 <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
