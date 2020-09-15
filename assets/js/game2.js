@@ -25,7 +25,6 @@ let penalty = -1;
 
 
 
-
 function getMathQuestions() {
 
     fetch('https://opentdb.com/api.php?amount=10&category=19&type=multiple')
@@ -152,7 +151,6 @@ function getRandomQuestions() {
             console.error(err);
         });
 }
-
 
 
 

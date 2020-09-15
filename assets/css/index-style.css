@@ -106,12 +106,6 @@ flex-center {
 }
 
 /*Buttons*/
-
-option {
-    font-size: 40px;
-
-}
-
 a:hover {
     color: var(--blue);
     background-color: var(--orange);
@@ -119,7 +113,7 @@ a:hover {
     text-shadow: none;
 }
 
-select:hover{
+#startbtn:hover{
     background-color: rgba(245, 127, 23, 0.8);
     border-radius: 5px;
     text-shadow: none;
@@ -131,12 +125,13 @@ select:hover{
     transform: none;
 }
 
-/*Forms*/
-
-select{
-    width: 100%;
+.start-game {
+    text-decoration: none;
+    width: 23%;
     margin: 20px 0px 20px 0px;
-    padding: 10px 30px 10px 30px;
+    padding: 10px 10px 10px 10px;
+    color: var(--blue);
+    background-color: white;
     border-radius: 5px;
     font-size: x-large;
     display: flex;
