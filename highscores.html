@@ -7,22 +7,32 @@
     <meta http-equiv="X-UA-Compatible"content="ie=edge"/>
 
     <title>High Scores</title>
-    <link rel=" stylesheet" href="./assets/css/style.css"/>
-    <link rel="stylesheet" href="./assets/css/highscores.css"/>
+<!-- Insert Css frame work for materialize -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" />
+
+   
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    
 </head>
 <body>
-    <header id="header" class="indigo darken-4 center-align">
-        <!-- Logo goes here -->
-        <img src="./assets/images/wizier-logo.png">
-    </header>
-    <div class="container">
-        <div id="highScores" class="flex-center flex-column">
-            <h1 id="finalScore">High Scores</h1>
-            <ul id="highScoresList"></ul>
-            <a href="./index.html" class="btn">Go to HomePage</a>
-        </div>
+    <header class= "indigo darken-4 center-align"><img src="./assets/images/wizier-logo.png" alt=""></header>
+    <div id="highScores" class="container flex-center flex-column">
+        <h3  class="indigo-text text-darken-4" id="finalScore">High Scores</h3>
+        <!--finish line!  -->
+        <ul id="highScoresList"> High Scores</ul>
+               <ul class="collection">
+                <li class="collection-item avatar">
+            
+            <a href="./index.html" class="btn btn-navigate" >Go to HomePage</a>
+            <a href="./study.html" class="btn btn-navigate"> Learn More!</a>
     </div>
-<script src="./assets/js/highscores.js"></script>   
+
+    <script src=“https://code.jquery.com/jquery-3.4.1.min.js”></script>
+    <script src=“https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js”></script>
+    <script src=“https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js”> </script>
+    <script src="./assets/js/highscores.js"></script>   
+
+
 
 </body>
 </html>
