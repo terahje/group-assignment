@@ -47,6 +47,10 @@
         font-size: 40px;
     }
 
+    h2 img {
+        width: 100%;
+        height: auto;
+    }
     input{
         text-align: center;
     }
