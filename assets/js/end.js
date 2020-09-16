@@ -37,6 +37,6 @@ saveHighScore = (e) => {
     highScores.splice(5); //removes everything after index 5 in the array
 
     localStorage.setItem('highScores', JSON.stringify(highScores)); //update local storage--have to convert to string so that it's saved
-    window.location.assign('./index.html');
+    window.location.assign('./highscores.html');
 
 };
