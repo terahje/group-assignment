@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Wizier</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <!-- <link rel="stylesheet" href="./assets/css/styles.css" /> -->
@@ -24,17 +25,10 @@
                     <h3 class="indigo-text text-darken-4">Let's Get Wizier</h3>
                     <p>Choose your subject</p>
                 <div id="subject-buttons" class="card-body">
-
-                    <button class="btn btn-submit" id="math">Math</button>
-                    <button class="btn btn-submit" id="science">Science</button>
-                    <button class="btn btn-submit" id="geography">Geography</button>
-                    <button class="btn btn-submit" id="random">Random</button>
-                    <!-- <ul class="right hide-on-med-and-down">
-                        <li id="math">Math</li>
-                        <li id="science">Science</li>
-                        <li id="geography">Geography</li>
-                        <li id="random">Random Topics</li>
-                    </ul> -->
+                    <button class="btn btn-submit hoverable" id="math">Math</button>
+                    <button class="btn btn-submit  hoverable" id="science">Science</button>
+                    <button class="btn btn-submit  hoverable" id="geography">Geography</button>
+                    <button class="btn btn-submit  hoverable" id="random">Random</button>
                 </div>
                 <!-- </div> -->
             <!-- </nav> -->
@@ -58,7 +52,7 @@
                 <div class="col s2">
 
                 </div>
-                <div id="question-card" class="col s8">
+                <div id="question-card" class="col s10 offset-s1">
                     <div class="card large">
                         <div class="card-content">
                             <span id="question" class="card-title">Select the correct answer</span>
@@ -83,6 +77,11 @@
             </div>
         </aside>
     </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" 
+    integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
     <script src="./assets/js/game2.js"></script>
 </body>
 </html>

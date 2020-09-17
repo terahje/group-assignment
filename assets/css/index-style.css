@@ -142,3 +142,18 @@ a:hover {
     flex-direction: column;
     align-items: center;
 }
+
+@media screen and (max-width: 600px) {
+    header a {
+        margin: 5px;
+        text-decoration: underline;
+    }
+    h2 {
+        text-align: center;
+    }
+
+    .start-game {
+        width: 50%;
+        text-align: center;
+    }
+}
