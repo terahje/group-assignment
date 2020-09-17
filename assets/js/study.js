@@ -6,7 +6,7 @@ var subjectButtonsEl = document.querySelector("#subject-buttons");
 var modalContainerEl = document.querySelector("#modal-container");
 
 var getVideo = function(searchSubject){
-var apiKey = "AIzaSyC_ulDAOCSFzMHJohdo0uLmgt94TwOefOk";
+var apiKey = "AIzaSyBUJh8h4jbE166G9aTAsUJ3iAXtqWpNCC8";
 var apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=date&q=" + searchSubject + "&regionCode=US&relevanceLanguage=en&safeSearch=strict&key=" + apiKey;
 
     fetch(apiUrl).then(function(response){
