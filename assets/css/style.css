@@ -4,8 +4,11 @@
 }
 
 header img {
-    width: 400px;
-    height: 200px;
+    max-width:400px;
+    width: 75%;
+    height: auto;
+    /* max-width: 400px;
+    height: 200px; */
 }
 
 .students img {
