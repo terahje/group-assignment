@@ -8,7 +8,7 @@ let scienceBtnEl = document.getElementById('science');
 let geogBtnEl = document.getElementById('geography');
 let randomBtnEl = document.getElementById('random');
 let cardContEl = document.getElementById('card-container');
-
+let subjectEl = document.getElementById('subject-buttons');
 
 let correctEl = document.getElementById('correctAnswer');
 let incorrectEl = document.getElementById('incorrectAnswer');
@@ -33,35 +33,38 @@ let penalty = -1;
 
 
 
+subjectEl.onclick = function (event) {
+
+    event.preventDefault();
+
+    let target = event.target;
+
+    switch (target.id) {
 
 
-mathBtnEl = document.addEventListener("click", function (e) {
-    e.preventDefault();
-    cardContEl.className = "show";
-    getMathQuestions();
+        case 'math':
+            cardContEl.className = "show"
+            getMathQuestions()
+            break;
+        case 'science':
+            cardContEl.className = "show"
+            getScienceQuestions()
+            break;
+        case 'geography':
+            cardContEl.className = "show"
+            getGeographyQuestions()
+            break;
+        case 'random':
+            cardContEl.className = "show"
+            getRandomQuestions()
+            break;
+       default:
+            console.log('no questions available')
+            break;
+    }
+};
 
-})
 
-
-scienceBtnEl = document.addEventListener("click", function (e) {
-    e.preventDefault();
-    cardContEl.className = "show";
-    getScienceQuestions();
-})
-
-geogBtnEl = document.addEventListener("click", function (e) {
-    e.preventDefault();
-    cardContEl.className = "show";
-    getGeographyQuestions();
-})
-
-randomBtnEl = document.addEventListener("click", function (e) {
-
-    e.preventDefault();
-    cardContEl.className = "show";
-    getRandomQuestions();
-
-})
 
 
 
@@ -96,7 +99,10 @@ function getMathQuestions() {
 
                 return formatQuestion;
 
-            }); console.log(questions)
+            });
+            console.log('Math')
+            console.log(questions)
+
 
             startGame();
 
@@ -128,7 +134,9 @@ function getScienceQuestions() {
                     formatQuestion[(index + 1)] = choices;
                 });
                 return formatQuestion;
-            }); console.log(questions)
+            });
+            console.log('Science')
+            console.log(questions)
             startGame();
         })
         .catch((err) => {
@@ -156,7 +164,11 @@ function getGeographyQuestions() {
                     formatQuestion[(index + 1)] = choices;
                 });
                 return formatQuestion;
-            }); console.log(questions)
+            });
+
+            console.log('Geography')
+
+            console.log(questions)
             startGame();
         })
         .catch((err) => {
@@ -184,7 +196,10 @@ function getRandomQuestions() {
                     formatQuestion[(index + 1)] = choices;
                 });
                 return formatQuestion;
-            }); console.log(questions)
+            });
+
+            console.log('random')
+            console.log(questions)
             startGame();
         })
         .catch((err) => {
