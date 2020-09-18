@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport"content="width=device-width, initial-scale=1.0"/>
     <title>Get Wizier</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <!-- <link rel="stylesheet" href="./assets/css/styles.css" /> -->
@@ -28,12 +29,14 @@
             <h1 id="finalScore">Final Score: </h1>
             <form>
                 <input type="text" name="username" id="username" placeholder="username" />
-                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
+                <button type="submit" class="btn btn-submit hoverable" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
                     Save
                 </button>
-            </form>
-            <a href="./game.html" class="btn">Play Again</a>
-            <a href="./index.html" class="btn"> Go to HomeScreen</a>
+           
+            <a href="./game.html" class="btn btn-navigate hoverable">Play Again</a>
+            <a href="./index.html" class="btn btn-navigate hoverable"> Go to HomeScreen</a>
+            <a href="./study.html" class="btn btn-navigate hoverable"> Learn More!</a>
+        </form>
         </div>
     </div>
     <script src="./assets/js/end.js"></script>
