@@ -7,7 +7,7 @@ var modalContainerEl = document.querySelector("#modal-container");
 
 var getVideo = function(searchSubject){
 var apiKey = "AIzaSyBUJh8h4jbE166G9aTAsUJ3iAXtqWpNCC8";
-var apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=date&q=" + searchSubject + "&regionCode=US&relevanceLanguage=en&safeSearch=strict&key=" + apiKey;
+var apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=" + searchSubject + "&regionCode=US&relevanceLanguage=en&safeSearch=strict&key=" + apiKey;
 
     fetch(apiUrl).then(function(response){
         if(response.ok){
@@ -15,8 +15,9 @@ var apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResul
                 displayVideo(data);
             });
         } else {
+            
             Swal.fire({
-                title: "Please choose a subject.",
+                title: "We can't find what you are looking for.",
                 confirmButtonText: "Return to Choices",
                 confirmButtonColor: "#2e3374"
             })
@@ -56,6 +57,7 @@ var displayVideo = function(data) {
 
     //video array
     var videos = data.items
+    
     //video loop
     for (var i=0; i < videos.length; i++) {
         let vidId = videos[i].id.videoId;
