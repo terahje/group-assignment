@@ -15,7 +15,6 @@ var apiUrl = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResul
                 displayVideo(data);
             });
         } else {
-            
             Swal.fire({
                 title: "We can't find what you are looking for.",
                 confirmButtonText: "Return to Choices",
