@@ -2,6 +2,14 @@ const questionEl = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('collection-item'));
 let questionCounter = 0;
 
+
+let mathBtnEl = document.getElementById('math');
+let scienceBtnEl = document.getElementById('science');
+let geogBtnEl = document.getElementById('geography');
+let randomBtnEl = document.getElementById('random');
+let cardContEl = document.getElementById('card-container');
+
+
 let correctEl = document.getElementById('correctAnswer');
 let incorrectEl = document.getElementById('incorrectAnswer');
 
@@ -22,6 +30,38 @@ let max_questions = 10; //total number of questions given via the API
 let correct_bonus = 10;
 let penalty = -1;
 
+
+
+
+
+
+mathBtnEl = document.addEventListener("click", function (e) {
+    e.preventDefault();
+    cardContEl.className = "show";
+    getMathQuestions();
+
+})
+
+
+scienceBtnEl = document.addEventListener("click", function (e) {
+    e.preventDefault();
+    cardContEl.className = "show";
+    getScienceQuestions();
+})
+
+geogBtnEl = document.addEventListener("click", function (e) {
+    e.preventDefault();
+    cardContEl.className = "show";
+    getGeographyQuestions();
+})
+
+randomBtnEl = document.addEventListener("click", function (e) {
+
+    e.preventDefault();
+    cardContEl.className = "show";
+    getRandomQuestions();
+
+})
 
 
 
@@ -151,18 +191,6 @@ function getRandomQuestions() {
             console.error(err);
         });
 }
-
-
-
-
-
-getMathQuestions();
-getScienceQuestions();
-getGeographyQuestions();
-getRandomQuestions();
-
-
-
 
 
 function startGame() {

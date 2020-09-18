@@ -25,6 +25,21 @@
         font-size: 23px;
         margin: 0px 20px 0px 20px;
     }
+    li{
+        padding-bottom: 3px;
+        color: white;
+        text-shadow: 1.5px 1px 3px black;
+        list-style-type: none;
+    }
+    
+    p{
+        color: white;
+        text-shadow: .5px .5px black;
+        text-align: center;
+        font-size: 25px;
+        font-family: sans-serif;
+        padding: 0px 325px 0px 325px;
+    }
 
     h2{
         font-family: sans-serif;
@@ -52,7 +67,7 @@
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    margin: -27px auto;
+    margin: -34px auto;
 }
 .container > *{
     width: 100%;
@@ -127,66 +142,18 @@ a:hover {
     flex-direction: column;
     align-items: center;
 }
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {
-    /* this will be applied on any screen smaller than 980px */
-    h2 {
-        font-size: xx-large;
+
+@media screen and (max-width: 600px) {
+    header a {
+        margin: 5px;
+        text-decoration: underline;
     }
-    
-    .start-game {
-        text-decoration: none;
-        width: 23%;
-        margin: 20px 0px 20px 0px;
-        padding: 5px 5px 5px 5px;
-        color: var(--blue);
-        background-color: white;
-        border-radius: 5px;
-        font-size: large;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    h2 {
+        text-align: center;
     }
 
-/* MEDIA QUERY FOR TABLETS AND SMALLER */
-@media screen and (max-width: 768px) {
-    /* this will be applied on any screen between 768px and 575 px */
-    h2 {
-        font-size: x-large;
-    }
-  
-    
     .start-game {
-        text-decoration: none;
-        width: 23%;
-        margin: 20px 0px 20px 0px;
-        padding: 5px 5px 5px 5px;
-        color: var(--blue);
-        background-color: white;
-        border-radius: 5px;
-        font-size: medium;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 50%;
+        text-align: center;
     }
-
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-@media screen and (max-width: 575px) {
-    /* this will be applied on any screen smaller than 575px */
-    h2 {
-        font-size: medium;
-    }
-    
-    .start-game {
-        text-decoration: none;
-        width: 23%;
-        margin: 20px 0px 20px 0px;
-        padding: 5px 5px 5px 5px;
-        color: var(--blue);
-        background-color: white;
-        border-radius: 5px;
-        font-size: x-small;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+}
