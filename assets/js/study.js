@@ -1,4 +1,3 @@
-
 // this page holds the functionality to get more information regarding a certain subject
 var videoContainerEl = document.querySelector("#video-container");
 var searchFormEl = document.querySelector("#search-subject-container");
