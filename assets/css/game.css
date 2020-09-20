@@ -16,6 +16,10 @@
         transition: transform 150ms;
     }
 
+    .choice-text:hover {
+        background-color: rgba(46, 51, 116, 0.3);
+    }
+
     .choice-prefix{
         padding: .75rem 2.5rem;
         background-color: var(--darkLavender);
