@@ -7,7 +7,10 @@ This website uses APIS to help anyone get a little more wise.  Once greeted with
 ## Technologies Used: 
 HTML, CSS, JavaScript, jQuery, Materialize
 
-
+## Link to deployed site
 https://terahje.github.io/group-assignment/
+
+## Link to GitHub repository
+https://github.com/terahje/group-assignment
 
 ![](assets/images/screenshot.jpg)
